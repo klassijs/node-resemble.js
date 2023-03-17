@@ -1,16 +1,16 @@
 'use strict';
 
 describe('node-resemble.js', function() {
-  var EXAMPLE_LARGE_IMAGE = 'example/LargeImage.png';
-  var EXAMPLE_SMALL_IMAGE = 'example/SmallImage.png';
-  var EXAMPLE_PEOPLE_IMAGES = [
+  let EXAMPLE_LARGE_IMAGE = 'example/LargeImage.png';
+  let EXAMPLE_SMALL_IMAGE = 'example/SmallImage.png';
+  let EXAMPLE_PEOPLE_IMAGES = [
 	  'example/People.png',
 	  'example/People2.png'
   ];
-  var OPTIMISATION_SKIP_STEP = 6;
-  var DEFAULT_LARGE_IMAGE_THRESHOLD = 1200;
+  let OPTIMISATION_SKIP_STEP = 6;
+  let DEFAULT_LARGE_IMAGE_THRESHOLD = 1200;
 
-  var resemble = require('./resemble.js');
+  let resemble = require('./resemble.js');
 
   describe('largeImageThreshold', function() {
     describe('when unset', function() {
@@ -186,7 +186,7 @@ describe('node-resemble.js', function() {
   }
 
   function getPixelForLocation(image, x, y) {
-    var index = (image.width * y + x) << 2;
+    let index = (image.width * y + x) << 2;
     return {
       red: image.data[index],
       green: image.data[index + 1],

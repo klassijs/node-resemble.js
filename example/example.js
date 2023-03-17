@@ -1,5 +1,5 @@
-var resemble = require('../resemble.js');
-var fs = require('fs');
+let resemble = require('../resemble.js');
+let fs = require('fs');
 
 resemble.outputSettings({
   errorColor: {
@@ -37,8 +37,8 @@ resemble('People.jpg').compareTo('People2.jpg')
     fs.writeFileSync('diffjpg.jpg', data.getDiffImageAsJPEG());
   });
 
-var fileData1 = fs.readFileSync('People.png');
-var fileData2 = fs.readFileSync('People2.png');
+let fileData1 = fs.readFileSync('People.png');
+let fileData2 = fs.readFileSync('People2.png');
 resemble(fileData1).compareTo(fileData2)
   //.ignoreAntialiasing()
   //.ignoreColors()
